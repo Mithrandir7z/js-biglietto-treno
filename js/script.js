@@ -8,7 +8,16 @@ var chilometriViaggio = parseInt( prompt("Inserire i km totali" , "inserire:") )
 var etaCliente = parseInt( prompt("Inserire la tua età" , "inserire:") );
 
 // calcolare km * presso unitario (0.21€)
-
-
+var prezzoUnitario = 0.21;
+var totale = chilometriViaggio * prezzoUnitario;
 
 // se è under applicare sconto 20% se è over 65 applicare sconto 40% altrimenti stampare il prezzo non scontato.
+var scontoApplicato;
+
+if ( etaCliente < 18 ) {
+    scontoApplicato = ( totale * 20 );
+    console.log(scontoApplicato);
+
+    scontoApplicato = scontoApplicato / 100;
+    console.log(scontoApplicato);
+}
