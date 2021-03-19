@@ -14,21 +14,18 @@ var totale = chilometriViaggio * prezzoUnitario;
 // se è under applicare sconto 20% se è over 65 applicare sconto 40% altrimenti stampare il prezzo non scontato.
 var scontoApplicato;
 var prezzoFinale;
-prezzoFinale = prezzoFinale.toFixed(2);
 
 if ( etaCliente < 18 ) {
-    scontoApplicato = totale * 20 ;
-    scontoApplicato = scontoApplicato / 100;
+    scontoApplicato = totale * 20 / 100 ;
     //calcolo sconto minori 18
-    prezzoFinale = scontoApplicato;
+    prezzoFinale = totale - scontoApplicato;
 } else if ( etaCliente > 65 ) {
-    scontoApplicato = totale * 40 ;
-    scontoApplicato = scontoApplicato / 100;
+    scontoApplicato = totale * 40 / 100;
     //calcolo sconto over 65
-    prezzoFinale = scontoApplicato;
+    prezzoFinale = totale - scontoApplicato;
 } else {
     //calcolo senza sconto
-    prezzoFinale = chilometriViaggio * prezzoUnitario;
+    prezzoFinale = totale;
 }
 
 //stampa
