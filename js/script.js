@@ -24,7 +24,7 @@ if ( etaCliente < 18 ) {
     scontoApplicato = scontoApplicato / 100;
     prezzoFinale = scontoApplicato;
 } else {
-    prezzoFinale = 
+    prezzoFinale = chilometriViaggio * prezzoUnitario;
 }
 
 document.getElementById("prezzo").innerHTML = "Il prezzo del biglietto è di €" + prezzoFinale;
