@@ -28,5 +28,6 @@ if ( etaCliente < 18 ) {
     prezzoFinale = totale;
 }
 
+prezzoFinale = prezzoFinale.toFixed(2);
 //stampa
 document.getElementById("prezzo").innerHTML = "Il prezzo del biglietto è di €" + prezzoFinale;
