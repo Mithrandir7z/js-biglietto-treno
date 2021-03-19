@@ -13,11 +13,18 @@ var totale = chilometriViaggio * prezzoUnitario;
 
 // se è under applicare sconto 20% se è over 65 applicare sconto 40% altrimenti stampare il prezzo non scontato.
 var scontoApplicato;
+var prezzoFinale;
 
 if ( etaCliente < 18 ) {
     scontoApplicato = ( totale * 20 );
-    console.log(scontoApplicato);
-
     scontoApplicato = scontoApplicato / 100;
-    console.log(scontoApplicato);
+    prezzoFinale = scontoApplicato;
+} else if ( etaCliente > 65 ) {
+    scontoApplicato = ( totale * 40 );
+    scontoApplicato = scontoApplicato / 100;
+    prezzoFinale = scontoApplicato;
+} else {
+    prezzoFinale = 
 }
+
+document.getElementById("prezzo").innerHTML = "Il prezzo del biglietto è di €" + prezzoFinale;
