@@ -17,12 +17,12 @@ var prezzoFinale;
 prezzoFinale = prezzoFinale.toFixed(2);
 
 if ( etaCliente < 18 ) {
-    scontoApplicato = ( totale * 20 );
+    scontoApplicato = totale * 20 ;
     scontoApplicato = scontoApplicato / 100;
     //calcolo sconto minori 18
     prezzoFinale = scontoApplicato;
 } else if ( etaCliente > 65 ) {
-    scontoApplicato = ( totale * 40 );
+    scontoApplicato = totale * 40 ;
     scontoApplicato = scontoApplicato / 100;
     //calcolo sconto over 65
     prezzoFinale = scontoApplicato;
